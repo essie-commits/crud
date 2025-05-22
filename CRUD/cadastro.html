@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de campeonatos</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <form id="cadastro_campeonato">
+
+        <fieldset>
+            <legend><b>CADASTRO</b>
+            <br>de campeonatos</legend>
+
+            <label for="id_nome">
+                <input 
+                type="text"
+                name="nome"
+                id="id_nome"
+                minlength="2"
+                maxlength="50"
+                placeholder="insira nome"
+                required>
+            </label>
+
+            <label for="id_data">
+                <input 
+                type="date" 
+                name="data" 
+                id="id_data"
+                placeholder="DD-MM-AAAA"
+                required>
+            </label>
+
+            <select name="modalidade" id="id_modalidade">
+                <option value="0" disabled selected>selecione uma modalidade</option>
+                <optgroup label="esportivas">
+                    <option value="basquete" name="basquete" class="modalidade">basquete</option>
+                    <option value="futebol" name="futebol" class="modalidade">futebol</option>
+                    <option value="futsal" name="futsal" class="modalidade">futsal</option>
+                    <option value="handebol" name="handebol" class="modalidade">handebol</option>
+                    <option value="vôlei" name="volei" class="modalidade">vôlei</option>
+                    <option value="vôlei de praia" name="volei_praia" class="modalidade">vôlei de praia</option>
+                </optgroup>
+                <optgroup label="acadêmicas">
+                    <option value="ciências humanas" name="humanas" class="modalidade">ciências humanas</option>
+                    <option value="matemática" name="humanas" class="modalidade">matemática</option>
+                    <option value="ciências da natureza" name="humanas" class="modalidade">ciências da natureza</option>
+                    <option value="linguagens e códigos" name="humanas" class="modalidade">linguagens e códigos</option>
+                    <option value="especificas" name="especificas" class="modalidade">matérias específicas (saúde, robótica...)</option>
+                </optgroup>
+            </select>
+
+            <div id="btn_cadastrando">
+            <button type="submit" name="cadastro" id="id_cadastro" class="envio">cadastrar campeonato</button>
+            <button type="reset" name="limpar" id="id_limpar_cadastro" class="limpar">limpar</button>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <button name="consulta" id="id_consulta">ver campeonato(s) cadastrado(s)</button>
+
+    <p name="resultado" id="id_resultado"></p>
+
+    <dialog id="janela_editar">
+        <form id="editar">
+            <fieldset>
+
+            <label for="id_editar_nome">
+                <input 
+                type="text"
+                name="editar_nome"
+                id="id_editar_nome"
+                minlength="2"
+                maxlength="50"
+                placeholder="insira nome"
+                >
+            </label>
+
+            <label for="id_editar_data">
+                <input 
+                type="date" 
+                name="editar_data" 
+                id="id_editar_data"
+                placeholder="DD-MM-AAAA"
+                >
+            </label>
+
+            <select name="editar_modalidade" id="id_editar_modalidade">
+                <option value="0" disabled selected>selecione uma modalidade</option>
+                <optgroup label="esportivas">
+                    <option value="basquete" name="basquete" class="modalidade">basquete</option>
+                    <option value="futebol" name="futebol" class="modalidade">futebol</option>
+                    <option value="futsal" name="futsal" class="modalidade">futsal</option>
+                    <option value="handebol" name="handebol" class="modalidade">handebol</option>
+                    <option value="vôlei" name="volei" class="modalidade">vôlei</option>
+                    <option value="vôlei de praia" name="volei_praia" class="modalidade">vôlei de praia</option>
+                </optgroup>
+                <optgroup label="acadêmicas">
+                    <option value="ciências humanas" name="humanas" class="modalidade">ciências humanas</option>
+                    <option value="matemática" name="humanas" class="modalidade">matemática</option>
+                    <option value="ciências da natureza" name="humanas" class="modalidade">ciências da natureza</option>
+                    <option value="linguagens e códigos" name="humanas" class="modalidade">linguagens e códigos</option>
+                    <option value="especificas" name="especificas" class="modalidade">matérias específicas (saúde, robótica...)</option>
+                </optgroup>
+            </select>
+
+            <button type="submit" name="salvar" id="id_salvar" class="envio">salvar mudanças</button>
+            <button type="reset" name="limpar" class="limpar">limpar</button>
+            <button name="fechar" id="fechar_editar" class="fechar">fechar</button>
+
+            </fieldset>
+        </form>
+    </dialog>
+
+    <script src="cadastro.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+        <form id="login">
+            <fieldset>
+                <legend><B>LOGIN</B></legend>
+
+                <p>bem-vindo, usuário(a)!</p>
+
+                <label for="id_email">
+                    <input 
+                    type="email" 
+                    name="email" 
+                    id="id_email"
+                    pattern=".+@admin.com"
+                    minlength="5"
+                    maxlength="100"
+                    placeholder="email"
+                    required>
+                </label>
+
+                <label for="id_senha">
+                    <input 
+                    type="password" 
+                    name="senha" 
+                    id="id_senha"
+                    minlength="6"
+                    maxlength="100"
+                    placeholder="senha"
+                    required>
+                </label>
+
+                <div id="button_login">
+                <button type="submit" name="login" id="btn_login" class="envio">login</button>
+                <button type="reset" name="limpar" id="btn_limpar" class="limpar">limpar</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <script src="login.js" type="module"></script>
+</body>
+</html>

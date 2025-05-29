@@ -1,7 +1,5 @@
 import Campeonato from "./campeonato.js";
 
-// 1- captura de dados e inscricao de torneio ✅✅
-
 let cadastroCampeonato = document.getElementById("cadastro_campeonato");
 let campeonatosCadastrados =
   JSON.parse(localStorage.getItem("campeonato(s)")) || [];
